@@ -1,5 +1,5 @@
 [meta]
-save_dir = "~/Experiments/Fullband_Baseline"
+save_dir = "/data/DNS-Challenge-INTERSPEECH/exp/Fullband_Baseline"
 description = "This is a description of FullSubNet experiment."
 seed = 0
 use_amp = true
@@ -26,10 +26,10 @@ beta2 = 0.999
 [train_dataset]
 path = "dataset_train.Dataset"
 [train_dataset.args]
-clean_dataset = "~/Datasets/DNS-Challenge-INTERSPEECH/datasets/clean_0.6.txt"
+clean_dataset = "/data/DNS-Challenge-INTERSPEECH/datasets/clean.txt"
 clean_dataset_limit = false
 clean_dataset_offset = 0
-noise_dataset = "~/Datasets/DNS-Challenge-INTERSPEECH/datasets/noise.txt"
+noise_dataset = "/data/DNS-Challenge-INTERSPEECH/datasets/noise.txt"
 noise_dataset_limit = false
 noise_dataset_offset = 0
 num_workers = 36
@@ -37,7 +37,7 @@ pre_load_clean_dataset = false
 pre_load_noise = false
 pre_load_rir = false
 reverb_proportion = 0.75
-rir_dataset = "~/Datasets/DNS-Challenge-INTERSPEECH/datasets/rir.txt"
+rir_dataset = "/data/DNS-Challenge-INTERSPEECH/datasets/rir.txt"
 rir_dataset_limit = false
 rir_dataset_offset = 0
 silence_length = 0.2
@@ -59,8 +59,8 @@ pin_memory = false
 path = "dataset_validation.Dataset"
 [validation_dataset.args]
 dataset_dir_list = [
-    "~/Datasets/DNS-Challenge-INTERSPEECH/datasets/test_set/synthetic/with_reverb/",
-    "~/Datasets/DNS-Challenge-INTERSPEECH/datasets/test_set/synthetic/no_reverb/"
+    "/data/DNS-Challenge-INTERSPEECH/datasets/test_set/synthetic/with_reverb/",
+    "/data/DNS-Challenge-INTERSPEECH/datasets/test_set/synthetic/no_reverb/"
 ]
 sr = 16000
 
