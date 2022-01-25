@@ -105,7 +105,10 @@ def load_wav(file, sr=16000):
     if len(file) == 2:
         return file[-1]
     else:
-        return librosa.load(os.path.abspath(os.path.expanduser(file)), mono=False, sr=sr)[0]
+        wav = librosa.load(os.path.abspath(os.path.expanduser(file)), mono=False, sr=sr)[0]
+        if np.ndim(wav) == 2:
+            wav = wav[0]
+        return wav
 
 
 def aligned_subsample(data_a, data_b, sub_sample_length):
